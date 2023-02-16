@@ -5,7 +5,6 @@ import Item from './components/Item'
 function App() {
     return(
         <div>
-            <div>HOME</div>
             <Item/>
             <Item/>
             <Item text = {'Hello'}/>
