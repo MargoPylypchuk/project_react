@@ -1,10 +1,19 @@
-import React from 'react'
+import React,{satIsClick, useState} from 'react'
+import '../../App.css'
 
-function Item({ text }) {
-    console.log(text)
+function Item({ user,relations }) {
+    const [isClick, satIsClick] = useState(false)
+
+    const getRelashionUser = () =>{
+        // console.log(user.relations)
+        satIsClick(!isClick)
+        
+    }
+    console.log(relations)
+    
     return(
-        <div>
-            <div> {text === undefined ? 'standart text' : text}</div>
+        <div className={relations.includes(user.id) ? 'item green'  : 'item'  }onClick={getRelashionUser}>
+            {user.content} 
         </div>
     )
 }
